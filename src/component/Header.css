@@ -1,0 +1,67 @@
+.rectangle{
+    /* position: absolute;
+    width: 3.91px;
+    height: 5.83px;
+    left: 30.61px;
+    top: 11.55px;
+    background: #D9D9D9;
+border-radius: 14.7402px;
+transform: rotate(-21.59deg); */
+/* border: 2px solid white; */
+display: flex;
+width: 80rem;
+height: 5rem;
+}
+.addcontacts{
+    align-items: right;
+    /* border: 2px solid white; */
+    height: 3rem;
+    width: 15rem;
+    margin-left: 17rem;
+    padding-right: 6rem;
+    margin-top: 2rem;
+}
+.butterfly{
+    /* border: 2px solid white;   */
+    width: 35rem;
+    height: 2rem;
+}
+.btn{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 0.8rem;
+    border: none;
+    margin-top: 1rem;
+}
+/* .icon{
+    height: 2rem;
+    width: 12rem;
+} */
+
+.image1{
+    height: 10rem;
+    width: 10rem;
+    margin-left: 17rem;
+}
+@media only screen and (max-width: 1180px) {
+    .image1{
+        height: 7rem;
+        width: 7rem;
+        margin-left: 2rem; 
+        margin-top: 3rem;  
+    }
+    .addcontacts{
+        
+        /* border: 2px solid white; */
+        height: 3rem;
+        width: 15rem;
+        margin-left: 1rem;
+        padding-right: 46rem;
+        margin-top: 4rem;
+    }
+    .btn{
+        height: 2.7rem;
+        width: 2.7rem;
+        margin-right: 30rem;
+    }
+}
