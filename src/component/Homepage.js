@@ -6,6 +6,7 @@ import List from "./List";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Addcontact from "../Pages/Addcontact";
+import ViewCotact from "../Pages/ViewContact";
 function Homepage() {
 return(
     <div className="page">
@@ -20,7 +21,8 @@ return(
       </Router> */}
         <SearchBar/>
         <List/>
-        <Addcontact/>
+        {/* <Addcontact/> */}
+        <ViewCotact/>
     </div>
     );
 }

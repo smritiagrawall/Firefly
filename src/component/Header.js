@@ -1,9 +1,16 @@
 import React from "react";
 import "./Header.css";
 import fire from '../images/Firefly.png';
-import { Link } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
+// import { Link } from 'react-router-dom';
 import Addcontact from "../Pages/Addcontact";
+import { Route, useNavigate,Switch, Link, Routes } from "react-router-dom";
 function Header() {
+    // const navigate = useNavigate();
+    // const redirectadd = () => {
+    //   //Redirect to the python page
+    //   navigate("/Addcontact");
+    // };
 return(
     <div>
     <div className="rectangle">
@@ -11,15 +18,15 @@ return(
         <img className="image1" src={fire} alt="my image"></img>
         </div>
         <div className="addcontacts">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-        {/* <Link  path="/Addcontact" > */}
-        <a href="/Addcontact">
-            <button class="btn" ><i class="fa fa-plus"></i></button>
-        </a>
-            {/* </Link> */}
+       
+        <Link to="/addcontact" >
+      
+            <button class="btn"><FaPlus /></button>
+      
+            </Link>   
         </div>
     </div>
-
+{/* //  onClick={redirectadd}> */}
     </div>
     );
 }

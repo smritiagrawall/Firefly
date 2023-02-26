@@ -1,5 +1,11 @@
 import React from "react";
 import "./Addcontact.css";
+import { FaRegTrashAlt } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaDiscord } from 'react-icons/fa';
+import { FaTwitter} from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 // import { useNavigate } from "react-router-dom";
 function Addcontact() {
     // let navigate = useNavigate();
@@ -8,18 +14,24 @@ function Addcontact() {
         //   <button onClick={() => navigate(-1)}>Back</button> 
         <div className="main">
             <div className="title">
+                <div className="arrowdiv">
+                <button className="back"><FaArrowLeft /></button>
             <h1>Add new Contact</h1>
+            </div>
             <p>Name</p>
             <form>
                 <input type="text" autofocus="autofocus" className="textbox"></input>
             </form>
-            <p>Wallet Address</p>
+            <p >Wallet Address</p>
             <form>
                 <input type="text" autofocus="autofocus" className="textbox"></input>
             </form>
             <p>Social media contact (recommended)</p>
-            <div>
-
+            <div className="iconsdiv">
+            <button className="btn1"><FaEnvelope/></button>
+            <button className="btn1"><FaDiscord/></button>
+            <button className="btn1"><FaTwitter/></button> 
+            <button className="btn1"><FaPaperPlane/></button>
             </div>
             <form>
                 <input type="text" autofocus="autofocus" placeholder="add email ID" className="textbox"></input>
@@ -45,10 +57,10 @@ function Addcontact() {
     <div>
         <div className="box">
             <button className="save">Save</button>
-            {/* <div>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-           <button> <i class="fa fa-trash-o" style="font-size:36px"></i></button>
-            </div>  */}
+            <div>
+           
+           <button className="del"><FaRegTrashAlt /></button>
+            </div> 
         </div>
     </div>
         </div>

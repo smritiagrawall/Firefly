@@ -43,6 +43,11 @@ height: 5rem;
     width: 10rem;
     margin-left: 17rem;
 }
+
+.addcontacts svg{
+height: 1.5rem;
+width: 1.5rem;
+}
 @media only screen and (max-width: 1180px) {
     .image1{
         height: 7rem;
@@ -55,8 +60,8 @@ height: 5rem;
         /* border: 2px solid white; */
         height: 3rem;
         width: 15rem;
-        margin-left: 1rem;
-        padding-right: 46rem;
+        margin-left: 0rem;
+        padding-right: 46.4rem;
         margin-top: 4rem;
     }
     .btn{
