@@ -1,14 +1,248 @@
 import React from "react";
-import "./ViewContact.css";
+// import "./ViewContact.css";
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaPen } from 'react-icons/fa';
 import { FaShareAlt } from 'react-icons/fa';
 import { FaDiscord } from 'react-icons/fa';
+import Rowwrapper from "../wrappers/RowWrapper";
+import styled from "styled-components";
 function ViewContact(){
+    const ScreenHeaderWrapper = styled(Rowwrapper)`
+
+    .main{
+        height:80rem;;
+    }
+    .imagebox{
+        width: 6rem;
+        height: 6rem;
+        background-color: #222222;
+        margin-left: 35.5rem;
+        margin-top: 5rem;
+        border-radius: 0.6rem;
+        }
+        .yellow{
+            width: 2.5rem;
+            height: 0.5rem;
+            background-color: rgb(239, 185, 50);
+            margin-left: 1.8rem;
+            border-radius: 0.4rem;
+        margin-top: 4rem;
+        }
+        
+        .main h2{
+            color: aliceblue;
+            margin-left: 33rem;
+        }
+        
+        .main p{
+            color: aliceblue;
+            margin-left: 18rem;
+        }
+        
+        .textbox1{
+            height: 2.7rem;
+            border-radius: 0.5rem;
+            border: none;
+            width: 44rem;
+            background-color: #222222;
+            margin-left: 17rem; 
+            padding-left: 1rem;
+        }
+        .textbox2{
+            height: 2.7rem;
+            border-radius: 0.5rem;
+            border: none;
+            width: 39rem;
+            background-color: #222222;
+            margin-left: 17rem; 
+            padding-left: 1rem;
+        }
+        
+        .socialicon{
+            height: 2.7rem;
+            width: 2.7rem;
+            margin-left: 2rem; 
+            border-radius: 2rem;
+            background-color: #222222;
+        }
+        .socialdiv{
+            display: flex;
+        }
+        .back{
+            margin-left: 18rem;
+            height: 3.2rem;
+            width: 3.2rem;
+            margin-top: 2.8rem;
+            border-radius: 1rem;
+            background-color: black;
+          }
+          .back1{
+            margin-left: 38rem;
+            height: 3.2rem;
+            width: 3.2rem;
+            margin-top: 2.8rem;
+            border-radius: 1rem;
+            background-color: black;
+          }
+          .back svg{
+            height: 1.4rem;
+            width: 1.4rem;
+            color: aliceblue;
+          }
+          .back1 svg{
+            height: 1.4rem;
+            width: 1.4rem;
+            color: aliceblue;
+          }
+        
+          .socialicon button{
+            margin-top: 0.7rem;
+            height: 1.3rem;
+            width: 1.7rem;
+            margin-left: 0.4rem;
+          }
+
+          .box{
+            border: 2px solid white;
+            width: 22.5em;
+            margin-left: 26rem;
+            border-radius: 0.7rem;
+            background-color: aliceblue;
+            height: 3.7rem;
+            margin-top: 4rem;
+            display: flex;
+          }
+          .box svg{
+            height: 1.4rem;
+          width: 1.4rem;
+          
+          }
+          .save{
+            height:3rem;
+            width: 18rem;
+            border-radius: 0.7rem;
+            margin-left: 0.5rem;
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            background-color: black;
+            color: aliceblue;
+          }
+          .del{
+            margin-top: 0.25rem;
+            height: 3.2rem;
+            width: 3.2rem;
+            margin-left: 0.3rem;
+            background-color: #bdb7b7;
+            border: none;
+            border-radius: 1.2rem;
+            }
+        @media only screen and (max-width: 1180px) {
+            .uppericon{
+                display:flex;
+
+            }
+            .uppericon .back{
+             margin-left:2.6rem;
+            }
+            .back1{
+                margin-left:11rem;
+            }
+            .imagebox{
+                width: 6rem;
+                height: 6rem;
+                background-color: #222222;
+                margin-left: 8rem;
+                margin-top: 5rem;
+                border-radius: 0.6rem;
+                }
+                .yellow{
+                    width: 2.5rem;
+                    height: 0.5rem;
+                    background-color: rgb(239, 185, 50);
+                    margin-left: 1.8rem;
+                    border-radius: 0.4rem;
+                margin-top: 4rem;
+                }
+                
+                .main h2{
+                    color: aliceblue;
+                    margin-left: 5rem;
+                }
+                
+                .main p{
+                    color: aliceblue;
+                    margin-left: 2.5rem;
+                }
+                
+                .textbox1{
+                    height: 2.7rem;
+                    border-radius: 0.5rem;
+                    border: none;
+                    width: 17.5rem;
+                    background-color: #222222;
+                    margin-left: 2rem; 
+                    padding-left: 1rem;
+                }
+                .textbox2{
+                    height: 2.7rem;
+                    border-radius: 0.5rem;
+                    border: none;
+                    width: 13rem;
+                    background-color: #222222;
+                    margin-left: 2rem; 
+                    padding-left: 1rem;
+                }
+                
+                .socialicon{
+                    height: 2.7rem;
+                    width: 2.7rem;
+                    margin-left: 2rem; 
+                    border-radius: 2rem;
+                    background-color: #222222;
+                }
+                .socialdiv{
+                    display: flex;
+                }
+                .box{
+                    border: 2px solid white;
+                    width: 16.5em;
+                    margin-left: 3rem;
+                    border-radius: 0.7rem;
+                    background-color: aliceblue;
+                    height: 3.7rem;
+                    margin-top: 4rem;
+                    display: flex;
+                  }
+                  .box svg{
+                    height: 1.4rem;
+                  width: 1.4rem;
+                  
+                  }
+                  .save{
+                    height:3rem;
+                    width: 18rem;
+                    border-radius: 0.7rem;
+                    margin-left: 0.5rem;
+                    margin-top: 0.3rem;
+                    margin-bottom: 0.3rem;
+                    background-color: black;
+                    color: aliceblue;
+                  }
+                  .del{
+                    margin-top: 0.25rem;
+                    height: 3.2rem;
+                    width: 3.2rem;
+                    margin-left: 0.3rem;
+                    background-color: #bdb7b7;
+                    border: none;
+                    border-radius: 1.2rem;
+                    }
+        }
+`;
     return(
-<div>
+<ScreenHeaderWrapper>
     <div className="main">
-        <div>
+        <div className="uppericon">
         <button className="back"><FaArrowLeft /></button>
         <button className="back1"><FaPen /></button>
         </div>
@@ -47,7 +281,7 @@ function ViewContact(){
             </div> 
             </div>
     </div>
-</div>
+</ScreenHeaderWrapper>
 );
 }
 

@@ -8,13 +8,11 @@ function App() {
   return (
    <div>
 
-<Router>
 <Homepage/>
+<Router>
+
         <Routes>
 
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/project/:id" element={<ProjectDisplay />} /> */}
           <Route path="/addcontact" element={<Addcontact />} />
         </Routes>
      
