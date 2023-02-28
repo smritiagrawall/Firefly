@@ -12,6 +12,7 @@ import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 function Addcontact() {
     const [active, setActive] = useState(false);
+    // const [activeicon,setActiveicon]=useState();
     const handleClick = () => {
       setActive(!active);
     };
@@ -21,14 +22,14 @@ function Addcontact() {
       };
     // let navigate = useNavigate();
     const ScreenHeaderWrapper = styled(Rowwrapper)`
-    .title h1{
+    .header h1{
 
-        margin-left: 9rem; 
+        margin-left: 17rem; 
             margin-top: 3rem;
             color:#bdb9b9 ;
     }
     
-    .title p{
+    .header p{
     
         margin-left: 17rem; 
             margin-top: 2rem;
@@ -45,7 +46,7 @@ function Addcontact() {
         padding-left: 1rem;
     }
     
-    .colorss{
+    .Colorboxesdiv{
         /* display: inline; */
       
       width: 25rem;
@@ -56,7 +57,7 @@ function Addcontact() {
         /* border: 2px solid white; */
          display: flex;
      }
-     .subdivs{
+     .yellowbox{
         width: 6rem;
         height: 3rem;
         margin-top: 1rem;
@@ -72,7 +73,7 @@ function Addcontact() {
     
      }
     
-     .subdivvs{
+     .greenbox{
         width: 6rem;
         height: 3rem;
         border: 2px solid rgb(31, 104, 45);
@@ -85,7 +86,7 @@ function Addcontact() {
      
      }
      
-     .subdiv2s{
+     .pinkbox{
         width: 6rem;
         height: 3rem;
         border: 2px solid rgb(177, 53, 128);
@@ -97,25 +98,25 @@ function Addcontact() {
        background-color: #221e15;
      }
     
-     .subdivs h3{
+     .yellowbox h3{
         
         // margin-left: 0.1rem;
         color: rgb(224, 182, 30);
        
       }
-      .subdivvs h3{
+      .greenbox h3{
         color: rgb(31, 104, 45);
         margin-left: 0.1rem;
     
         
        
       }
-      .subdiv2s h3{
+      .pinkbox h3{
         color: rgb(177, 53, 128);
         margin-left: 0.1rem;
        
       }
-      .save{
+      .savebtn{
         height:3rem;
         width: 18rem;
         border-radius: 0.7rem;
@@ -125,7 +126,7 @@ function Addcontact() {
         background-color: black;
         color: aliceblue;
       }
-      .box{
+      .savediv{
         border: 2px solid white;
         width: 22.5em;
         margin-left: 26rem;
@@ -135,7 +136,7 @@ function Addcontact() {
         margin-top: 5rem;
         display: flex;
       }
-    .del{
+    .delbtn{
     margin-top: 0.25rem;
     height: 3.2rem;
     width: 3.2rem;
@@ -145,12 +146,12 @@ function Addcontact() {
     border-radius: 1.2rem;
     }
     
-    .box svg{
+    .savediv svg{
       height: 1.4rem;
     width: 1.4rem;
     
     }
-    .arrowdiv{
+    .icondiv{
       display: flex;
     }
     .title svg{
@@ -159,16 +160,20 @@ function Addcontact() {
       width: 1.4rem;
       color: aliceblue;
     }
-    .back{
-      margin-left: 18rem;
+    .backbutton{
+      margin-left: 26rem;
       height: 3.2rem;
       width: 3.2rem;
       margin-top: 2.8rem;
       border-radius: 1rem;
       background-color: black;
     }
-    
-    .iconsdiv{
+    .backbutton svg{
+      height: 1.4rem;
+      width: 1.4rem;
+      color: aliceblue;
+    }
+    .socialicondiv{
       width: 36rem;
       height: 4rem;
       /* border: 2px solid wheat; */
@@ -186,29 +191,29 @@ function Addcontact() {
      border-radius: 2rem;
     
     }
+.btn1 svg{
+  width: 1.5rem;
+      height: 1.5rem;
+      color:white;
+}
 
-    .cont{
-        border:none;
-      }
-      .cont2{
-        border: 2px solid rgb(224, 182, 30);
-      }
+
     
       @media only screen and (max-width: 1180px) {
   
 
-        .title h1{
+        .header h1{
 
             margin-left: 2rem; 
                 margin-top: 3rem;
                 color:#bdb9b9;
                 font-size:1.7rem;
         }
-       .back{
+       .backbutton{
         margin-left:1.3rem;
         border:none;
        }
-    .title p{
+    .header p{
     
         margin-left: 3rem; 
             margin-top: 2rem;
@@ -225,7 +230,7 @@ function Addcontact() {
           padding-left: 1rem;
       }
       
-      .colorss{
+      .Colorboxesdiv{
           /* display: inline; */
         
         width: 25rem;
@@ -236,7 +241,7 @@ function Addcontact() {
           /* border: 2px solid white; */
            display: flex;
        }
-       .subdivs{
+       .yellowbox{
         width: 6rem;
         height: 0.3rem;
       //   border: 2px solid rgb(224, 182, 30);
@@ -251,7 +256,7 @@ function Addcontact() {
        }
      
 
-       .subdivvs{
+       .greenbox{
         width: 6rem;
         height: 0.5rem;
         margin-top: 1rem;
@@ -260,14 +265,14 @@ function Addcontact() {
        
        }
        
-       .subdiv2s{
+       .pinkbox{
         width: 6rem;
         height: 0.5rem;
         margin-top: 1rem;
         margin-left: 0.5rem;
         padding-bottom: 3rem;
        }
-      .iconsdiv{
+      .socialicondiv{
         // margin-right:4rem;
         width: 36rem;
         height: 4rem;
@@ -275,25 +280,25 @@ function Addcontact() {
         margin-left: 0.2rem;
         display: flex;
       }
-       .subdivs h3{
+       .yellowbox h3{
           
           margin-left: 0.3rem;
           color: rgb(224, 182, 30);
          
         }
-        .subdivvs h3{
+        .greenbox h3{
           color: rgb(31, 104, 45);
           margin-left: 0.2rem;
       
           
          
         }
-        .subdiv2s h3{
+        .pinkbox h3{
           color: rgb(177, 53, 128);
           margin-left: 0.3rem;
          
         }
-        .save{
+        .savebtn{
           height:3rem;
           width: 8rem;
           border-radius: 0.7rem;
@@ -303,7 +308,7 @@ function Addcontact() {
           background-color: black;
           color: aliceblue;
         }
-        .box{
+        .savediv{
           border: 2px solid white;
           width: 12.5em;
           margin-left: 4.5rem;
@@ -320,10 +325,10 @@ function Addcontact() {
         //   <button onClick={() => navigate(-1)}>Back</button> 
         <ScreenHeaderWrapper>
         <div className="main">
-            <div className="title">
-                <div className="arrowdiv">
+            <div className="header">
+                <div className="icondiv">
                 <h1>Add new Contact</h1>
-                <button className="back"><FaArrowLeft /></button>
+                <button className="backbutton"><FaArrowLeft /></button>
            
             </div>
             <p>Name</p>
@@ -335,7 +340,7 @@ function Addcontact() {
                 <input type="text" autofocus="autofocus" className="textbox"></input>
             </form>
             <p>Social media contact (recommended)</p>
-            <div className="iconsdiv">
+            <div className="socialicondiv">
             <button className="btn1" onClick={handleClick1}
         style={{ backgroundColor: active ? "#FAD66E" : "" }}><FaEnvelope/></button>
             <button className="btn1"><FaDiscord/></button>
@@ -351,26 +356,26 @@ function Addcontact() {
             </form>
             </div>
 
-            <div className="colorss">
-        <button className="subdivs"  onClick={handleClick}
+            <div className="Colorboxesdiv">
+        <button className="yellowbox"  onClick={handleClick}
         style={{ borderColor: active ? "yellow" : "#221e15" }}
        >
          <h3>Yellow</h3>
         </button>
-        <button className="subdivvs">
+        <button className="greenbox">
         <h3>Green</h3>
 </button>
-<button className="subdiv2s">
+<button className="pinkbox">
 <h3>Pink</h3>
 </button>
     </div>
 
     <div>
-        <div className="box">
-            <button className="save" autofocus="autofocus">Save</button>
+        <div className="savediv">
+            <button className="savebtn" autofocus="autofocus">Save</button>
             <div>
            
-           <button className="del"><FaRegTrashAlt /></button>
+           <button className="delbtn"><FaRegTrashAlt /></button>
             </div> 
         </div>
     </div>

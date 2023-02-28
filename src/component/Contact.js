@@ -8,7 +8,7 @@ import styled from "styled-components";
 import ColorProfile from "../utils/ColorProfile";
 function List() {
     const ScreenHeaderWrapper = styled(ColumnWrapper)`
-    .frequent{
+    .head{
         /* border: 2px solid white; */
         width: 20rem;
         margin-left: 18rem;
@@ -77,7 +77,7 @@ function List() {
             margin-left: 28rem;
             
          }
-         .colors{
+         .Colorboxesdiv{
             /* display: inline; */
             width: 44rem;
             height: 7rem;
@@ -86,7 +86,7 @@ function List() {
             /* border: 2px solid white; */
              display: flex;
          }
-         .subdiv{
+         .yellowbox{
             width: 6rem;
             height: 3rem;
             margin-top: 1rem;
@@ -100,7 +100,7 @@ function List() {
            background-color: #221e15;
         
          }
-         .subdiv1{
+         .greenbox{
             width: 6rem;
             height: 3rem;
             border:none;
@@ -114,7 +114,7 @@ function List() {
         
         }
         
-        .subdiv2{
+        .pinkbox{
             width: 6rem;
             height: 3rem;
             // border: 2px solid rgb(177, 53, 128);
@@ -128,24 +128,24 @@ function List() {
         
         }
         
-         .subdiv h3{
+         .yellowbox h3{
            color: rgb(224, 182, 30);
         //    margin-left: 3rem;
           
          }
-         .subdiv1 h3{
+         .greenbox h3{
            color: rgb(31, 104, 45);
         //    margin-left: 3rem;
           
          }
-         .subdiv2 h3{
+         .pinkbox h3{
            color: rgb(177, 53, 128);
         //    margin-left: 3rem;
           
          }
         
          @media only screen and (max-width: 1180px) {
-           .frequent{
+           .head{
               margin-left: 2rem;
               }
               .names{
@@ -170,7 +170,7 @@ function List() {
               color:#bdb9b9 ;
               margin-left: 6rem;
            }
-           .colors{
+           .Colorboxesdiv{
               /* display: inline; */
             
             width: 20rem;
@@ -181,7 +181,7 @@ function List() {
               /* border: 2px solid white; */
                /* display: flex; */
            }
-           .subdiv{
+           .yellowbox{
               width: 6rem;
               height: 0.3rem;
             //   border: 2px solid rgb(224, 182, 30);
@@ -196,7 +196,7 @@ function List() {
           
            }
         
-           .subdiv1{
+           .greenbox{
               width: 6rem;
               height: 0.5rem;
               margin-top: 1rem;
@@ -206,7 +206,7 @@ function List() {
            
            }
            
-           .subdiv2{
+           .pinkbox{
               width: 6rem;
               height: 0.5rem;
               margin-top: 1rem;
@@ -214,19 +214,19 @@ function List() {
               padding-bottom: 3rem;
            }
         
-           .subdiv h3{
+           .yellowbox h3{
               
               margin-left: 0rem;
              
             }
-            .subdiv1 h3{
+            .greenbox h3{
              
               margin-left: 0rem;
           
               
              
             }
-            .subdiv2 h3{
+            .pinkbox h3{
              
               margin-left: 0rem;
              
@@ -235,7 +235,7 @@ function List() {
 `;
     return(
 <ScreenHeaderWrapper>
-<div className="frequent">
+<div className="head">
     <h2>Frequent</h2>
 </div>
 <div className="names">
@@ -260,14 +260,14 @@ function List() {
         <ColorProfile color={"green"}/>
         <ColorProfile color={"pink"}/>
     </div> */}
-    <div className="colors">
-        <button className="subdiv">
+    <div className="Colorboxesdiv">
+        <button className="yellowbox">
          <h3>Yellow</h3>
         </button>
-        <button className="subdiv1">
+        <button className="greenbox">
         <h3>Green</h3>
 </button>
-<button className="subdiv2">
+<button className="pinkbox">
 <h3>Pink</h3>
 </button>
     </div>

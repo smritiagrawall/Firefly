@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Homepage from './component/Homepage';
-import Addcontact from './Pages/Addcontact';
+import Addcontact from './Pages/AddContact';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

@@ -5,12 +5,12 @@ import logo from '../images/Logo.svg';
 import fire from '../images/Firefly.png';
 import { FaPlus } from 'react-icons/fa';
 // import { Link } from 'react-router-dom';
-import Addcontact from "../Pages/Addcontact";
+import Addcontact from "../Pages/AddContact";
 import styled from "styled-components";
 import { Route, useNavigate,Switch, Link, Routes } from "react-router-dom";
 function Header() {
     const ScreenHeaderWrapper = styled(Rowwrapper)`
-    .rectangle{
+    .maindiv{
         display: flex;
         width: 80rem;
         height: 5rem;
@@ -24,7 +24,7 @@ function Header() {
             padding-right: 6rem;
             margin-top: 2rem;
         }
-        .butterfly{
+        .fireflyicon{
             /* border: 2px solid white;   */
             width: 35rem;
             height: 2rem;
@@ -78,18 +78,16 @@ function Header() {
 `;
 return(
     <ScreenHeaderWrapper>
-    <div className="rectangle">
-        <div className="butterfly">
+    <div className="maindiv">
+        <div className="fireflyicon">
         <img className="image1" src={logo} alt="profile image"></img>
         </div>
         <div className="addcontacts">
-        <Link to="/Addcontact" >
-        <FaPlus />
-            {/* <button class="btn"></button> */}
+        <Link to="/Addcontact">
+            <button class="btn"><FaPlus /></button>
             </Link>   
         </div>
     </div>
-
     </ScreenHeaderWrapper>
     );
 }

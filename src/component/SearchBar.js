@@ -5,8 +5,6 @@ import Rowwrapper from "../wrappers/RowWrapper";
 import styled from "styled-components";
 
 const SearchBar =()=>{
-   
-
       const ScreenHeaderWrapper = styled(Rowwrapper)`
       form.example input[type=text] {
         padding: 10px;
@@ -38,9 +36,6 @@ const SearchBar =()=>{
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
       }
-      
-     
-      
       /* Clear floats */
       form.example::after {
         content: "";
