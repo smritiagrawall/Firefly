@@ -9,6 +9,9 @@ import { FaPaperPlane } from "react-icons/fa";
 import Rowwrapper from "../wrappers/RowWrapper";
 import styled from "styled-components";
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import ViewContact from "./ViewContact";
+// import Homepage from "../component/Homepage";
 // import { useNavigate } from "react-router-dom";
 function Addcontact() {
   const [active, setActive] = useState(false);
@@ -22,14 +25,20 @@ function Addcontact() {
   };
   // let navigate = useNavigate();
   const ScreenHeaderWrapper = styled(Rowwrapper)`
+  .main {
+    background-color: #0d0d0d;
+    width: 390px;
+    height: 500px;
+    overflow-x: hidden;
+  }
     .header h1 {
-      margin-left: 17rem;
+      margin-left: 0.5rem;
       margin-top: 3rem;
       color: #bdb9b9;
     }
 
     .header p {
-      margin-left: 17rem;
+      margin-left: 0.5rem;
       margin-top: 2rem;
       color: #bdb9b9;
     }
@@ -38,19 +47,20 @@ function Addcontact() {
       height: 2.7rem;
       border-radius: 0.5rem;
       border: none;
-      width: 44rem;
+      width: 20rem;
       background-color: #222222;
-      margin-left: 17rem;
+      margin-left: 0.5rem;
       padding-left: 1rem;
+      color:white;
     }
 
     .Colorboxesdiv {
       /* display: inline; */
 
-      width: 25rem;
+      width: 20rem;
       height: 7rem;
       margin-top: 2rem;
-      margin-left: 17rem;
+      margin-left: 0.2rem;
       margin-right: 5rem;
       /* border: 2px solid white; */
       display: flex;
@@ -59,38 +69,43 @@ function Addcontact() {
       width: 6rem;
       height: 3rem;
       margin-top: 1rem;
-      margin-left: 2rem;
-      // border:#221e15;
+      margin-left: 0.5rem;
+      border:none;
       // display: flex;
       padding-bottom: 3rem;
       border-radius: 1rem;
-      position: absolute;
+    
       // top:50%;
       background-color: #221e15;
+      cursor: pointer;
     }
 
     .greenbox {
       width: 6rem;
       height: 3rem;
-      border: 2px solid rgb(31, 104, 45);
+      // border: 2px solid rgb(31, 104, 45);
       margin-top: 1rem;
-      margin-left: 9rem;
+      margin-left: 0.5rem;
       /* display: flex; */
       padding-bottom: 3rem;
       border-radius: 1rem;
       background-color: #221e15;
+      cursor: pointer;
+      border:none;
     }
 
     .pinkbox {
       width: 6rem;
       height: 3rem;
-      border: 2px solid rgb(177, 53, 128);
+      // border: 2px solid rgb(177, 53, 128);
       margin-top: 1rem;
-      margin-left: 1rem;
+      margin-left: 0.6rem;
       /* display: flex; */
       padding-bottom: 3rem;
       border-radius: 1rem;
       background-color: #221e15;
+      cursor: pointer;
+      border:none;
     }
 
     .yellowbox h3 {
@@ -117,12 +132,12 @@ function Addcontact() {
     }
     .savediv {
       border: 2px solid white;
-      width: 22.5em;
-      margin-left: 26rem;
+      width: 18.5em;
+      margin-left: 1.8rem;
       border-radius: 0.7rem;
       background-color: aliceblue;
       height: 3.7rem;
-      margin-top: 5rem;
+      margin-top: 1rem;
       display: flex;
     }
     .delbtn {
@@ -141,6 +156,14 @@ function Addcontact() {
     }
     .icondiv {
       display: flex;
+    }
+
+    .icondiv svg {
+      color:white;
+      margin-left:2.5rem;
+      height:1.5rem;
+      width:1.5rem;
+      margin-top:3.5rem;
     }
     .title svg {
       height: 1.4rem;
@@ -161,17 +184,17 @@ function Addcontact() {
       color: aliceblue;
     }
     .socialicondiv {
-      width: 36rem;
+      width: 20rem;
       height: 4rem;
-      /* border: 2px solid wheat; */
-      margin-left: 15rem;
+      //  border: 2px solid wheat; 
+      margin-left: 0rem;
       display: flex;
     }
 
     .btn1 {
       width: 3rem;
       height: 3rem;
-      margin-left: 2rem;
+      margin-left: 0.7rem;
       background-color: #222222;
       border: none;
       border-radius: 2rem;
@@ -181,7 +204,9 @@ function Addcontact() {
       height: 1.5rem;
       color: white;
     }
-
+ .savemaindiv{
+  height:7rem;
+ }
     @media only screen and (max-width: 1180px) {
       .header h1 {
         margin-left: 2rem;
@@ -198,7 +223,13 @@ function Addcontact() {
         margin-top: 2rem;
         color: #bdb9b9;
       }
-
+      .icondiv svg {
+        color:white;
+        margin-left:3rem;
+        height:1.5rem;
+        width:1.5rem;
+        margin-top:3rem;
+      }
       .textbox {
         height: 2.7rem;
         border-radius: 0.5rem;
@@ -296,9 +327,11 @@ function Addcontact() {
         <div className="header">
           <div className="icondiv">
             <h1>Add new Contact</h1>
-            <button className="backbutton">
+            {/* <button className="backbutton"> */}
+            <Link to="/">
               <FaArrowLeft />
-            </button>
+              </Link>
+            {/* </button> */}
           </div>
           <p>Name</p>
           <form>
@@ -370,7 +403,7 @@ function Addcontact() {
           </button>
         </div>
 
-        <div>
+        <div className="savemaindiv">
           <div className="savediv">
             <button className="savebtn" autofocus="autofocus">
               Save

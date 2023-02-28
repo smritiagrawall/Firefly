@@ -11,13 +11,15 @@ const SearchBar =()=>{
         font-size: 17px;
         border: none;
         float: left;
-        width: 28rem;
+        width: 20rem;
         background: #222222;
-        margin-left: 22rem;
+        margin-left: 0.5rem;
         margin-top: 5rem;
         height: 2.11rem;
+        color:white;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
+        border-radius:1rem;
       }
       
       /* Style the submit button */
@@ -57,8 +59,8 @@ const SearchBar =()=>{
       <ScreenHeaderWrapper>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <form class="example" action="action_page.php">
-        <input type="text" placeholder="Search name,wallet address.." name="search"/>
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search name,wallet address.." name="search" />
+        <i class="fa fa-search"></i>
       </form></ScreenHeaderWrapper>
      );
  

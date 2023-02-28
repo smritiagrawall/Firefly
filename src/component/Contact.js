@@ -11,14 +11,14 @@ function List() {
     .head{
         /* border: 2px solid white; */
         width: 20rem;
-        margin-left: 18rem;
+        margin-left: 1rem;
         color: #bdb9b9;
         }
         .names{
-            width: 44rem;
+            width:22rem;
             height: 20rem;
             overflow-y: scroll;
-            margin-left: 17rem;
+            margin-left: 0.5rem;
             background-color: #222325;
             border-radius: 1rem;
         }
@@ -57,7 +57,7 @@ function List() {
             width: 44rem;
             height: 20rem;
             margin-top: 2rem;
-            margin-left: 17rem;
+            margin-left: 0.5rem;
             /* background-color: #222325;
             border-radius: 1rem; */
          }
@@ -79,10 +79,10 @@ function List() {
          }
          .Colorboxesdiv{
             /* display: inline; */
-            width: 44rem;
+            width: 24rem;
             height: 7rem;
             margin-top: 2rem;
-            margin-left: 3rem;
+            // margin-left: 3rem;
             /* border: 2px solid white; */
              display: flex;
          }
@@ -90,12 +90,12 @@ function List() {
             width: 6rem;
             height: 3rem;
             margin-top: 1rem;
-            margin-left: 2rem;
+            margin-left: 0.5rem;
             border:#221e15;
             // display: flex; 
            padding-bottom: 3rem;
            border-radius: 1rem;
-           position: absolute;
+         //   position: absolute;
         // top:50%;
            background-color: #221e15;
         
@@ -106,7 +106,7 @@ function List() {
             border:none;
             // border: 2px solid rgb(31, 104, 45);
             margin-top: 1rem;
-            margin-left: 9rem;
+            margin-left: 1rem;
             /* display: flex; */
            padding-bottom: 3rem;
            border-radius: 1rem;
@@ -192,7 +192,7 @@ function List() {
              padding-bottom: 3rem;
              border-radius: 1rem;
              background-color: #221e15;
-            
+             cursor: pointer;
           
            }
         
@@ -202,7 +202,7 @@ function List() {
               margin-top: 1rem;
               margin-left: 6.5rem;
               padding-bottom: 3rem;
-            
+              cursor: pointer;
            
            }
            
@@ -212,6 +212,7 @@ function List() {
               margin-top: 1rem;
               margin-left: 0.5rem;
               padding-bottom: 3rem;
+              cursor: pointer;
            }
         
            .yellowbox h3{

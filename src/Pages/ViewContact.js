@@ -6,17 +6,22 @@ import { FaShareAlt } from 'react-icons/fa';
 import { FaDiscord } from 'react-icons/fa';
 import Rowwrapper from "../wrappers/RowWrapper";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import List from "../component/Contact";
 function ViewContact(){
     const ScreenHeaderWrapper = styled(Rowwrapper)`
 
-    .main{
-        height:80rem;;
-    }
+    .main {
+        background-color: #0d0d0d;
+        width: 390px;
+        height: 500px;
+        overflow-x: hidden;
+      }
     .profilebox{
         width: 6rem;
         height: 6rem;
         background-color: #222222;
-        margin-left: 35.5rem;
+        margin-left: 8.5rem;
         margin-top: 5rem;
         border-radius: 0.6rem;
         }
@@ -31,31 +36,33 @@ function ViewContact(){
         
         .main h2{
             color: aliceblue;
-            margin-left: 33rem;
+            margin-left: 5.5rem;
         }
         
         .main p{
             color: aliceblue;
-            margin-left: 18rem;
+            margin-left: 1.4rem;
         }
         
         .textbox1{
             height: 2.7rem;
             border-radius: 0.5rem;
             border: none;
-            width: 44rem;
+            width: 19rem;
             background-color: #222222;
-            margin-left: 17rem; 
+            margin-left: 1.5rem; 
             padding-left: 1rem;
+            color:white;
         }
         .textbox2{
             height: 2.7rem;
             border-radius: 0.5rem;
             border: none;
-            width: 39rem;
+            width: 19rem;
             background-color: #222222;
-            margin-left: 17rem; 
+            margin-left: 1.5rem; 
             padding-left: 1rem;
+            color:white;
         }
         
         .socialicon{
@@ -69,7 +76,7 @@ function ViewContact(){
             display: flex;
         }
         .backbtn{
-            margin-left: 18rem;
+            margin-left: 1rem;
             height: 3.2rem;
             width: 3.2rem;
             margin-top: 2.8rem;
@@ -77,22 +84,24 @@ function ViewContact(){
             background-color: black;
           }
           .editbtn{
-            margin-left: 38rem;
+            margin-left: 14rem;
             height: 3.2rem;
             width: 3.2rem;
-            margin-top: 2.8rem;
+            margin-top: 0rem;
             border-radius: 1rem;
             background-color: black;
           }
           .backbtn svg{
             height: 1.4rem;
             width: 1.4rem;
-            color: aliceblue;
+            color: white;
+            // margin-left: 1rem;
           }
           .editbtn svg{
             height: 1.4rem;
             width: 1.4rem;
             color: aliceblue;
+            // margin-left: 12rem;
           }
         
           .socialicon button{
@@ -104,8 +113,8 @@ function ViewContact(){
 
           .savediv{
             border: 2px solid white;
-            width: 22.5em;
-            margin-left: 26rem;
+            width: 17.5em;
+            margin-left: 2rem;
             border-radius: 0.7rem;
             background-color: aliceblue;
             height: 3.7rem;
@@ -127,6 +136,9 @@ function ViewContact(){
             background-color: black;
             color: aliceblue;
           }
+          .savemaindiv{
+            height:7rem;
+          }
           .delbtn{
             margin-top: 0.25rem;
             height: 3.2rem;
@@ -136,17 +148,52 @@ function ViewContact(){
             border: none;
             border-radius: 1.2rem;
             }
+            .uppericon svg{
+                height:1.5rem;
+                width:1.5rem;
+                color:white;
+                // margin-left:15rem;
+            }
+
         @media only screen and (max-width: 1180px) {
             .uppericon{
                 display:flex;
+                // margin-left:0rem;
+                // margin-right:2rem;
+                border:2px solid white;
+            padding-right:1rem;
+            width:35rem;
+        //    align:left;
 
+            }
+            .uppericon svg{
+                width:1.5rem;
+                height:2.5rem;
+                // margin-left:8rem;
+
+
+            }
+            .arrowleft{
+                border:2px solid white;
+                margin-right:0rem;
+                width:10rem;
+                // margin-left:3rem;
+                padding-right:3rem;
+                display:flex;
+            }
+            .edit{
+                border:2px solid white;
+                display:flex;
+                padding-left:0rem;
+                width:16rem;
+                padding-right:4rem;
 
             }
             .uppericon .backbtn{
              margin-left:2.6rem;
             }
             .editbtn{
-                margin-left:11rem;
+                margin-left:10rem;
             }
             .profilebox{
                 width: 6rem;
@@ -156,6 +203,8 @@ function ViewContact(){
                 margin-top: 5rem;
                 border-radius: 0.6rem;
                 }
+
+              
                 .profilecolor{
                     width: 2.5rem;
                     height: 0.5rem;
@@ -195,11 +244,22 @@ function ViewContact(){
                 }
                 
                 .socialicon{
-                    height: 2.7rem;
-                    width: 2.7rem;
-                    margin-left: 2rem; 
+                    height: 2.9rem;
+                    width: 2.9rem;
+                    margin-left: 1rem; 
                     border-radius: 2rem;
                     background-color: #222222;
+                }
+                .socialicon button{
+                    border:none;
+                    background-color:#222222;
+                    // margin-right:0.5rem;
+                }
+                .socialicon svg{
+                    color:white;
+                    height:1.5rem;
+                    width:1.5rem;
+                    margin-right:0.3rem
                 }
                 .socialdiv{
                     display: flex;
@@ -243,9 +303,16 @@ function ViewContact(){
     return(
 <ScreenHeaderWrapper>
     <div className="main">
-        <div className="uppericon">
-        <button className="backbtn"><FaArrowLeft /></button>
-        <button className="editbtn"><FaPen /></button>
+        <div className="uppericon" >
+        <button className="backbtn">
+        <Link to="/"> <FaArrowLeft /></Link>
+       
+        </button> 
+        <button className="editbtn"> 
+        <Link to="/addcontact"> <FaPen /></Link>      
+        
+              </button>
+      
         </div>
         <div className="profilebox">
 <div className="profilecolor">
@@ -272,7 +339,7 @@ function ViewContact(){
             <button > < FaDiscord/></button>
             </div>
             </div>
-           
+           <div className="savemaindiv">
             <div className="savediv">
             <button className="savebtn">Copy wallet address</button>
            
@@ -280,6 +347,7 @@ function ViewContact(){
          <div>
            <button className="delbtn"> <FaShareAlt /></button>
             </div> 
+            </div>
             </div>
     </div>
 </ScreenHeaderWrapper>

@@ -13,8 +13,8 @@ function Homepage() {
   const ScreenHeaderWrapper = styled(Rowwrapper)`
     .main {
       background-color: #0d0d0d;
-      width: 100%;
-      height: 100%;
+      width: 390px;
+      height: 500px;
       overflow-x: hidden;
     }
   `;
